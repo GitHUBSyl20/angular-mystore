@@ -1,11 +1,12 @@
 <h2>Products</h2>
 
 <!--assign each index in the products array to the productId variable when iterating over the list-->
+<!--Assignation de l'index à l'id des produits-->
 <div *ngFor="let product of products; index as productId">
 
   <h3>
-    <!--Mdification of prodict name anchor to intoduce a router link -->
-    <!--The RouterLink directive gives the router control over the anchor element-->
+    <!--Mdification of product name anchor to intoduce a router link -->
+    <!--The RouterLink directive gives the router control over the anchor element. Contains fixed segment and variable segment-->
     <a [title]="product.name + ' details'" [routerLink]="['/products', productId]">
       {{ product.name }}
     </a>
